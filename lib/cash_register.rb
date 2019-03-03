@@ -13,9 +13,6 @@ class CashRegister
   def apply_discount
     @total *= (1 - @discount * 0.01)
   end
-  def items
-    @items
-  end
   def void_last_transaction
   end
 end
