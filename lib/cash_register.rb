@@ -11,6 +11,7 @@ class CashRegister
     (1..quantity).each {
       @items << title
     }
+    @prices << price * quantity
     @total += price * quantity
   end
   def apply_discount
