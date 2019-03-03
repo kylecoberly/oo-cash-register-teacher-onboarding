@@ -12,7 +12,9 @@ class CashRegister
   end
   def apply_discount
     @total *= 1 - @discount * 0.01
-    "After the discount, the total comes to $#{@total.to_i}."
+    @discount > 0
+      ? "After the discount, the total comes to $#{@total.to_i}."
+      : "There is no discount to apply."
   end
   def void_last_transaction
   end
