@@ -21,5 +21,7 @@ class CashRegister
     @discount > 0 ? discount_message : no_discount_message
   end
   def void_last_transaction
+    @items.pop
+    @prices.last
   end
 end
